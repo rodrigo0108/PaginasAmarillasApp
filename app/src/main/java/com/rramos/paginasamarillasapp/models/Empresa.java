@@ -1,10 +1,12 @@
 package com.rramos.paginasamarillasapp.models;
 
+import java.io.Serializable;
+
 /**
  * Created by RODRIGO on 20/09/2017.
  */
 
-public class Empresa {
+public class Empresa implements Serializable {
     private int id,telefono,logo;
     private String rubro;
     private String nombre;

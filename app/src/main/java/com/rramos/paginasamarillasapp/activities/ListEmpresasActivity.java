@@ -31,14 +31,15 @@ public class ListEmpresasActivity extends AppCompatActivity {
         EmpresaRepository empresaRepository = EmpresaRepository.getInstance();
 
         List<Empresa> empresas = empresaRepository.getEmpresas();
-        final EmpresaAdapter empresaAdapter = new EmpresaAdapter(empresas);
+        List<Empresa> empreasfiltrada = new ArrayList<>();
+
+        String rubro= getIntent().getStringExtra("rubroo");
+        empreasfiltrada=empresaRepository.filtrarEmpresa(rubro,empresas);
 
         Log.d("tag",String.valueOf(empresas.size()));
-        /*
-        adapter = new EmpresaAdapter(empresas,this);
-        recycler_empresas.setAdapter(adapter);*/
 
-        recycler_empresas.setAdapter(empresaAdapter);
-        empresaAdapter.getFilter().filter("educacion");
+        adapter = new EmpresaAdapter(empreasfiltrada,ListEmpresasActivity.this);
+        recycler_empresas.setAdapter(adapter);
+
     }
 }

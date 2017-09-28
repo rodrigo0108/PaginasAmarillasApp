@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rramos.paginasamarillasapp.activities.EmpresaSeleccionadaActivity"
+    android:orientation="vertical">
 
     <android.support.v7.widget.CardView
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -20,7 +26,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/nombre_empresa"
+                    android:id="@+id/nombre_texto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/empresa"
@@ -28,16 +34,15 @@
                     android:textSize="30sp"
                     />
 
-
                 <TextView
-                    android:id="@+id/direccion_empresa"
+                    android:id="@+id/direccion_texto"
                     android:layout_marginTop="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/mz_m_lote_17_praderas"
                     />
                 <TextView
-                    android:id="@+id/telefono_empresa"
+                    android:id="@+id/telefono_texto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/cardview_dark_background"
@@ -51,7 +56,7 @@
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/foto_empresa"
+                android:id="@+id/foto_texto"
                 android:layout_width="match_parent"
                 android:layout_height="110dp"
                 android:contentDescription="@string/esta_imagen_representa_el_logo_de_la_empresa"
@@ -64,4 +69,43 @@
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Información"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"/>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:id="@+id/info_texto"
+            android:text="infoo"/>
+    </android.support.v7.widget.CardView>
 
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:menu="@menu/bottom" />
+
+</RelativeLayout>
+
+
+
+
+
+</LinearLayout>
